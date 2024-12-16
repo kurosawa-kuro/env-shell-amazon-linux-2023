@@ -1,7 +1,7 @@
 .PHONY: setup setup-swap install install-docker install-nodejs chmod-scripts
 
 # 初期セットアップ（権限付与→swap設定→インストール）
-setup: chmod-scripts setup-swap nstall
+setup: chmod-scripts setup-swap install
 
 # スクリプトに実行権限付与
 chmod-scripts:
