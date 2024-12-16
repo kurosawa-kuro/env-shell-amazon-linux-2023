@@ -57,4 +57,7 @@ if ! grep -q "$SWAP_FILE" /etc/fstab; then
     echo "$SWAP_FILE none swap sw 0 0" >> /etc/fstab
 fi
 
+# キャッシュクリア
+sudo sh -c 'sync && echo 3 > /proc/sys/vm/drop_caches'
+
 echo "Swap setup completed successfully!"
